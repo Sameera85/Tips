@@ -131,11 +131,11 @@ if submit_button:
         st.error('Please enter a valid total bill amount.')
 
 # Interactive Section
-# Custom styled header with markdown
 st.markdown('<div class="custom-header">Explore Tipping Trends</div>', unsafe_allow_html=True)
 selected_metric = st.selectbox('Choose a metric to explore:', 
                                ['Tip as a Percentage of Total Bill', 'Average Tip by Bill Range'], 
                                key='select_metric')  # Unique key for this selectbox
+
 
 if selected_metric == 'Tip as a Percentage of Total Bill':
     tips['tip_percentage'] = (tips['tip'] / tips['total_bill']) * 100
